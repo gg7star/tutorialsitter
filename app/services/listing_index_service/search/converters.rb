@@ -2,6 +2,9 @@ module ListingIndexService::Search::Converters
   module_function
 
   def listing_hash(l, includes, meta={})
+    if l == nil
+      return 
+    end
     {
       id: l.id,
       title: l.title,
